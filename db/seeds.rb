@@ -18,12 +18,12 @@ puts 'user: ' << user.name
 user.confirm!
 user.add_role :admin
 
-user2 = User.find_or_create_by_email :name => ENV['USER_NAME'].dup, :email => ENV['USER_EMAIL'].dup, :password => ENV['USER_PASSWORD'].dup, :password_confirmation => ENV['USER_PASSWORD'].dup
+user2 = User.find_or_create_by_email :name => ENV['MIZPAH_NAME'].dup, :email => ENV['MIZPAH_EMAIL'].dup, :password => ENV['MIZPAH_PASSWORD'].dup, :password_confirmation => ENV['MIZPAH_PASSWORD'].dup
 puts 'user: ' << user2.name
 user2.confirm!
 user2.add_role :VIP
 
-user3 = User.find_or_create_by_email :name => ENV['USER_NAME'].dup, :email => ENV['USER_EMAIL'].dup, :password => ENV['USER_PASSWORD'].dup, :password_confirmation => ENV['USER_PASSWORD'].dup
+user3 = User.find_or_create_by_email :name => ENV['SHINOGI_NAME'].dup, :email => ENV['SHINOGI_EMAIL'].dup, :password => ENV['SHINOGI_PASSWORD'].dup, :password_confirmation => ENV['SHINOGI_PASSWORD'].dup
 puts 'user: ' << user3.name
 user3.confirm!
 user3.add_role :VIP
