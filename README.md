@@ -37,7 +37,7 @@ Developed by Mizpah & Shinogi for mmofish
 
 ## Heroku
 
-mmofish-production is deployed from the production branch.
+mmofish-production is deployed from the production branch.  remote 'production' --app mmogish-production
 
 ## License
 
