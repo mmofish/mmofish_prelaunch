@@ -35,6 +35,10 @@ The application is configured to send email using a Mandrill account.
 Based on a base implementation of rails composer.
 Developed by Mizpah & Shinogi for mmofish
 
+## Heroku
+
+mmofish-production is deployed from the production branch.
+
 ## License
 
 License details will be available on release.
