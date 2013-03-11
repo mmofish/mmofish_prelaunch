@@ -39,6 +39,7 @@ Developed by Mizpah & Shinogi for mmofish
 
 mmofish-production is deployed from the production branch.  remote 'production' --app mmogish-production
 
+Others to be added!
 ## License
 
 License details will be available on release.
