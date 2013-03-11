@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
 */
+@import "colors";
 
 .content {
   background-color: #eee;
@@ -22,4 +23,305 @@
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  }
+
+.home .content {
+      background:$backgroundOrange;
+      box-shadow:none;
+    }
+
+.home footer {margin-top:80px;}
+    
+/* UNIVERSAL */
+
+html {
+  overflow-y: scroll;
+  background-color: $backgroundGrey;
+  height:100%;
+  background-color:$backgroundOrange;
 }
+
+body {
+  background-color:$backgroundOrange;
+  background-image:image-url("bg.png");
+   background-repeat: repeat;      
+  
+}
+
+.home .navbar .brand {
+  float:left;
+  margin-right:10px;
+  font-size:1.7em;
+  color:$orange;
+  text-transform:uppercase;
+  font-weight:bold;
+  line-height:1;
+  text-shadow:none;
+  &:hover {
+    color:$orange;
+    text-decoration:none;
+  }
+}
+
+.home .header .navbar-inner {
+  background-image:none;
+  background-color:$black;
+  border:0px;
+}
+.sample_content {
+  height:372px;
+  
+}
+
+#footer {
+height: 60px;
+}
+
+section {
+  overflow:auto;
+}
+
+textarea {
+  resize:vertical;
+}
+
+/*scss inheritance in action!*/
+.center {
+  text-align:center;
+  h1 {
+    margin-bottom:10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing:-2px;
+  margin-bottom:30px;
+  text-align:center;
+  color:$greyLight;
+}
+
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+.text-shadow {
+  text-shadow: 0px 1px 1px $textShadow;
+  
+}
+
+/* Scroller pages for homepage concept /*
+ * 
+ */
+
+.page_first {background-color:$backgroundOrange}
+
+
+/*Note need to cut this with a media query
+ *and have alternate content for mobiles!
+ */
+
+/* First Page Hero Unit */
+#home_hero.visible-desktop{
+  margin-left:auto;
+  margin-right:auto;
+  width:800px;
+  height:400px;
+  margin-top:155px;
+  margin-bottom:10px;
+  box-shadow: 0px 2px 12px rgba(0,0,0,0.25);
+  background-color:$backgroundOrange;
+  background-image:image-url("tile-bg.png");
+  border-radius: 0px;
+  text-align:center;
+  padding:0;
+  transition: border .25s ease-in-out;
+  -webkit-transition: border .25s ease-in-out;
+  -moz-transition: border .25s ease-in-out;
+  -ms-transition: border .25s ease-in-out;
+  -o-transition: border .25s ease-in-out;
+  border: 1px solid #f78b00;
+    .container{
+     width:100%;
+     height:100%;
+     padding:0;
+     margin:0;
+    }
+  &:hover {
+    
+    border: 1px solid #fff200;
+/*    margin-top:154px;
+    margin-bottom:9px; */
+    
+  }
+
+}
+
+.big_fish {
+  margin-top:100px;
+   margin-left:auto;
+  margin-right:auto;
+} 
+/* Navbars */
+
+header.navbar {
+  background-color:#000;
+}
+
+.midnav {
+  background-image: image-url("separator-h.png");
+  background-repeat:no-repeat;
+  background-position:center bottom;
+  font-family:'Geo';
+  
+}
+.midnav > li { 
+  padding-bottom:10px;
+text-align:center; 
+  display:inline-block; 
+    /* IE hasLayout hack */ 
+    zoom:1; 
+    *display:inline; 
+} 
+
+.nav.midnav > li > a {
+    float: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size:27px;
+    transition: .25s ease-in-out;
+         -webkit-transition: .25s ease-in-out;
+         -moz-transition: .25s ease-in-out;
+         -ms-transition: .25s ease-in-out;
+         -o-transition: .25s ease-in-out;
+    &:hover {
+    text-shadow: 0px 1px 10px rgba(0,0,0,0.35);
+    color:$highlight;
+    background:transparent;
+    background-color:$backgroundOrange;
+    }
+  }
+
+.midnav {
+  color:#fff200;
+    a {
+      color:#fff200;
+    }
+}
+
+/* Email Sign-up */
+
+.email_signup {
+   .span2{
+    box-shadow: inset 0px 1px 8px rgba(0,0,0,0.25);
+    background-color:#f78b00;
+    border-color:#f78b00; 
+     &:hover, &:focus{
+       border-color:#fff200;
+       box-shadow: inset 0px 1px 8px rgba(0,0,0,0.25);
+       color: #fff200;
+     }
+   }
+  .btn{
+    color: #f78b00;
+    font-family: 'Geo';
+    font-size: 22px;
+    text-transform:lowercase;
+    text-shadow:none;
+    
+    background-color: #ffc000;
+   background: -webkit-gradient(linear, top, bottom, from(#fff200), to(#ffc000));
+   background: -webkit-linear-gradient(top, #fff200, #ffc000);
+   background: -moz-linear-gradient(top, #fff200, #ffc000);
+   background: -ms-linear-gradient(top, #fff200, #ffc000);
+   background: -o-linear-gradient(top, #fff200, #ffc000);
+   border-color: #f78b00;
+  }
+
+}
+
+/* Git Stats */
+
+
+.gitstats {
+  color:$font;
+  #commit_intro {
+    font-family:$headingFont;
+    font-size:27px;
+    text-transform:lowercase;
+    padding-left:5px;
+    margin-left:35px;
+  }
+  #commit_number {
+    font-family:$bodyFont;
+    font-size:   150px;
+    line-height: 125px;
+    margin-left:30px;
+   }
+   #commit_hash {
+     padding-left:35px;
+     padding-top:15px;
+     margin-left:55px;
+   }
+   #commit_message {
+     padding-left:10px;
+     padding-right:10px;
+     padding-top:5px;
+     margin-left:27px;
+     } 
+}
+
+
+
+/* Home Page Nav */
+.midnav > li > a:hover, .midnav > li > a:focus {
+  background-color:none;
+}
+
+/* Social Icons */
+.social_icons {
+  background-image: image-url("separator-v.png");
+  background-repeat:no-repeat;
+  background-position:right center;
+  padding-right:10px;
+  min-height:200px;
+  margin-top:5px;
+  margin-bottom:5px;
+   li {
+    margin-bottom:8px;
+    &:hover {      
+    }
+  }
+}
+
+/* FOOTER */
+
+footer {
+  background-image: image-url("separator-f.png");
+  background-repeat:no-repeat;
+  background-position:center top;
+  border-top: none;
+  background-color: $backgroundOrange;
+  color:#ffc000; 
+  a {
+    color: #fff200;
+    &:hover {
+      color: #ffff99; 
+      text-decoration:none;
+    }
+  }
+  small {
+    font-size:14px;
+    text-align:center;
+    font-weight:300;
+  }
+ }

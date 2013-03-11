@@ -1,3 +1,26 @@
+
+@import "colors";
 @import "bootstrap";
 body { padding-top: 60px; }
 @import "bootstrap-responsive";
+
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,600,300); /* Body Font */
+@import url(http://fonts.googleapis.com/css?family=Geo); /* Title font */
+
+
+body {
+  background-color:$backgroundOrange;
+  background-image:image-url("bg.png");
+  background-repeat: repeat;      
+}
+
+
+.header .navbar-inner .nav > li > a {
+    color:#666;
+    text-shadow:none;
+    &:hover, &:focus {
+    text-shadow: none;
+    color:$white;
+    }
+    
+  }
