@@ -5,7 +5,7 @@ end
 def join_mailing_list user
   visit root_path
   fill_in "email", :with => user[:email]
-  click_button "Subscribe"
+  click_button "Signup"
 end
 
 When /^I visit the home page$/ do
@@ -17,14 +17,14 @@ Then /^I should see a button "([^\"]*)"$/ do |arg1|
 end
 
 Then /^I should see a form with a field "([^"]*)"$/ do |arg1|
-  page.should have_content (arg1)
+  page.should have_field (arg1)
 end
 
 Then /^I should see a message "([^"]*)"$/ do |arg1|
   page.should have_content (arg1)
 end
 
-When /^I request to join the mailing list with with a vailid unique email address$/ do
+When /^I request to join the mailing list with a valid unique email address$/ do
   join_mailing_list new_user
 end
 
@@ -38,7 +38,7 @@ When /^I request to join the mailing list with an existing user account email ad
   join_mailing_list user
 end
 
-When /^When I request to join the mailing list with an existing subscribed email address$/ do
+When /^I request to join the mailing list with an existing subscribed email address$/ do
   user = new_user.merge(:email => "subscribeduser@mmofish.com")
   join_mailing_list user
 end

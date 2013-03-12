@@ -7,8 +7,11 @@ def put
       info = { }
       email = params[:email]
       result = mailchimp.list_subscribe(list_id, email, info, 'html', false, true, false, true)
-      Rails.logger.info("MAILCHIMP SUBSCRIBE: result #{result.inspect} for #{email}")
+       rescue Hominid::APIError => error
+      #Rails.logger.info("MAILCHIMP SUBSCRIBE: result #{result.inspect} for #{email}")
+      Rails.logger.info("MAILCHIMP SUBSCRIBE: result #{result}. Error: #{error.message}")
       redirect_to root_path, :notice =>"You have been subscribed to our notification list"
+   
   
 end
 
