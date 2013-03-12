@@ -262,4 +262,11 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
+  
+  # Adding mailchimp api and email list for integration into 
+  # devise user signup form
+  
+  Devise.mailchimp_api_key = ENV['MAILCHIMP_API_KEY']
+  Devise.mailing_list_name = ENV['MAILING_LIST_NAME']
+  
 end

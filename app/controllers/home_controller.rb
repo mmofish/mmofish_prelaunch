@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
-  def index
-    @users = User.all
-  end
+  
+  #removed index to test
+  #def index
+  #  @users = User.all
+  #end
 end
