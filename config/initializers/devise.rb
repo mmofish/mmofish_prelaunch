@@ -266,7 +266,7 @@ Devise.setup do |config|
   # Adding mailchimp api and email list for integration into 
   # devise user signup form
   
-  Devise.mailchimp_api_key = ENV['MAILCHIMP_API_KEY']
-  Devise.mailing_list_name = ENV['MAILING_LIST_NAME']
+  #Devise.mailchimp_api_key = ENV['MAILCHIMP_API_KEY']
+  #Devise.mailing_list_name = ENV['MAILING_LIST_NAME']
   
 end
