@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
-  
-  #removed index to test
-  #def index
-  #  @users = User.all
-  #end
+  #custom restful action - this may need a member route ?
+  def index
+  end
 end

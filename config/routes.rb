@@ -5,4 +5,8 @@ Myapp::Application.routes.draw do
   root :to => "home#index"
   devise_for :users
   resources :users
+
+
+match 'apis/put' => 'apis#put', :as => :put_api
+
 end
