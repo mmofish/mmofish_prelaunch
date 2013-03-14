@@ -12,6 +12,7 @@
  *= require_tree .
 */
 @import "colors";
+@import "font-awesome";
 
 .content {
   background-color: #eee;
@@ -26,11 +27,13 @@
   }
 
 .home .content {
-      background:$backgroundOrange;
+      background:transparent;
       box-shadow:none;
     }
 
-.home footer {margin-top:80px;}
+.home footer {margin-top:60px;
+
+}
     
 /* UNIVERSAL */
 
@@ -74,7 +77,9 @@ body {
 }
 
 #footer {
-height: 60px;
+    background-image:image-url("bg.png");
+   background-repeat: repeat;  
+height: 40px;
 }
 
 section {
@@ -136,7 +141,7 @@ p {
   margin-right:auto;
   width:800px;
   height:400px;
-  margin-top:155px;
+  margin-top:120px;
   margin-bottom:10px;
   box-shadow: 0px 2px 12px rgba(0,0,0,0.25);
   background-color:$backgroundOrange;
@@ -220,34 +225,55 @@ text-align:center;
 
 /* Email Sign-up */
 
-.email_signup {
-   .span2{
+#email.email_signup {
+  width: 190px;
+  border-radius: 4px 0 0 4px;
     box-shadow: inset 0px 1px 8px rgba(0,0,0,0.25);
+    color: #ffc000;
     background-color:#f78b00;
     border-color:#f78b00; 
      &:hover, &:focus{
        border-color:#fff200;
        box-shadow: inset 0px 1px 8px rgba(0,0,0,0.25);
        color: #fff200;
-     }
+     
    }
-  .btn{
-    color: #f78b00;
+ }
+.sub_btn{
+display: inline-block;
+padding: 4px 12px;
+margin-bottom: 9px;
+border: 1px solid #ffc000;
+border-left: none;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+margin-left: -5px;
+border-radius: 0 3px 3px 0;
+ 
+   color: #f78b00;
     font-family: 'Geo';
     font-size: 22px;
     text-transform:lowercase;
-    text-shadow:none;
-    
-    background-color: #ffc000;
+    text-shadow:none; 
+   background-color: #ffc000;
    background: -webkit-gradient(linear, top, bottom, from(#fff200), to(#ffc000));
    background: -webkit-linear-gradient(top, #fff200, #ffc000);
    background: -moz-linear-gradient(top, #fff200, #ffc000);
    background: -ms-linear-gradient(top, #fff200, #ffc000);
    background: -o-linear-gradient(top, #fff200, #ffc000);
-   border-color: #f78b00;
+ &:active {
+   background: -webkit-gradient(linear, top, bottom, from(#ffc000), to(#fff200));
+   background: -webkit-linear-gradient(top, #ffc000, #fff200);
+   background: -moz-linear-gradient(top, #ffc000, #fff200);
+   background: -ms-linear-gradient(top, #ffc000, #fff200);
+   background: -o-linear-gradient(top, #ffc000, #fff200);
+
+ }
+ 
   }
 
-}
+
 
 /* Git Stats */
 
@@ -289,27 +315,64 @@ text-align:center;
 
 /* Social Icons */
 .social_icons {
+  
   background-image: image-url("separator-v.png");
   background-repeat:no-repeat;
   background-position:right center;
-  padding-right:10px;
+  padding-right:30px;
   min-height:200px;
-  margin-top:5px;
+  margin-right:0;
+  margin-top:0px;
   margin-bottom:5px;
    li {
+      transition: .25s ease-in-out;
+         -webkit-transition: .25s ease-in-out;
+         -moz-transition: .25s ease-in-out;
+         -ms-transition: .25s ease-in-out;
+         -o-transition: .25s ease-in-out;
+     a {
+      color: #ffc000;
+      transition: .25s ease-in-out;
+         -webkit-transition: .25s ease-in-out;
+         -moz-transition: .25s ease-in-out;
+         -ms-transition: .25s ease-in-out;
+         -o-transition: .25s ease-in-out;
+     }
+     cursor:pointer;
     margin-bottom:8px;
-    &:hover {      
+    color: #ffc000;
+    font-size:15px;
+    text-shadow: 0px 1px 1px $textShadow;
+
+    a:hover {
+       color: $highlight;
+       text-decoration:none;
     }
   }
+}
+i { font-size: 40px; }
+
+.social_icons .sl { position: relative; } /* Font Awesome is missing YouTube :( */
+.icon-sign-blank .icon-play { position: absolute; top: 5px; left: 2px; color: $backgroundOrange; font-size: 20px; text-shadow:none;}
+.social_icons .si { position: relative; }
+.si .icon-sign-blank { position: absolute; top: 5px; left: 2px; color: transparent; font-size: 20px; text-shadow:none;}
+
+.social_icons ul {
+  margin-left:0;
+  padding-left:0;
+  
+}
+
+/* GIT STUFF */
+.span5.git-stuff{
+  margin-left: 55px;
+  
 }
 
 /* FOOTER */
 
 footer {
-  background-image: image-url("separator-f.png");
-  background-repeat:no-repeat;
-  background-position:center top;
-  border-top: none;
+
   background-color: $backgroundOrange;
   color:#ffc000; 
   a {
@@ -319,9 +382,47 @@ footer {
       text-decoration:none;
     }
   }
+  .f-separator {
+  background-image: image-url("separator-f.png");
+  background-repeat:no-repeat;
+  background-position:center top;
+  border-top: none;}
   small {
     font-size:14px;
     text-align:center;
     font-weight:300;
   }
  }
+ 
+/*BETA TAG*/
+.beta {
+  color: $backgroundOrange;
+  width:150px;
+  height:150px;
+  background-image: image-url("beta-bg.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+z-index: 10000;
+right:-28px;
+top:-44px;
+padding-top:36px;
+position: fixed;
+font-size: 10px;
+text-align:center;
+line-height:1;
+text-shadow: 0 1px 1px rgba(0,0,0,0.25);  
+text-rendering: optimizeLegibility;
+  .beta-text {
+    text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    text-rendering: optimizeLegibility;
+    font-size:14px;
+    font-family: 'Dosis';
+    line-height:1.5;
+    
+  }
+}
