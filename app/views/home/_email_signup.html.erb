@@ -1,5 +1,5 @@
 <div class="email_signup pull-right">
-<%= form_tag(put_api_path, :method => "put") do %>
+<%= form_tag(mailchimp_path) do %>
 <%= text_field_tag 'email', 'get updates', :class => "email_signup" %>
 <%= submit_tag  "Signup", :class => "sub_btn" %>
 <% end %>  

@@ -7,6 +7,11 @@ Myapp::Application.routes.draw do
   resources :users
 
 
-match 'apis/put' => 'apis#put', :as => :put_api
+get 'apis/put' => 'apis#put', :as => :put_api
+
+# default action of post is create!
+resource :mailchimp, :only => [:create]
+
+get 'profile', to: 'users#show'
 
 end

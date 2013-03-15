@@ -10,7 +10,7 @@ def put
        rescue Hominid::APIError => error
       #Rails.logger.info("MAILCHIMP SUBSCRIBE: result #{result.inspect} for #{email}")
       Rails.logger.info("MAILCHIMP SUBSCRIBE: result #{result}. Error: #{error.message}")
-      redirect_to root_path, :notice =>"You have been subscribed to our notification list"
+      redirect_to root_path, :notice =>"This is a test"
    
   
 end
