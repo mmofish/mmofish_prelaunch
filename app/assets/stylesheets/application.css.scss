@@ -51,26 +51,8 @@ body {
   
 }
 
-.home .navbar .brand {
-  float:left;
-  margin-right:10px;
-  font-size:1.7em;
-  color:$orange;
-  text-transform:uppercase;
-  font-weight:bold;
-  line-height:1;
-  text-shadow:none;
-  &:hover {
-    color:$orange;
-    text-decoration:none;
-  }
-}
 
-.home .header .navbar-inner {
-  background-image:none;
-  background-color:$black;
-  border:0px;
-}
+
 .sample_content {
   height:372px;
   
@@ -79,7 +61,7 @@ body {
 #footer {
     background-image:image-url("bg.png");
    background-repeat: repeat;  
-height: 40px;
+height: 60px;
 }
 
 section {
@@ -131,9 +113,11 @@ p {
 .page_first {background-color:$backgroundOrange}
 
 
+
 /*Note need to cut this with a media query
  *and have alternate content for mobiles!
  */
+
 
 /* First Page Hero Unit */
 #home_hero.visible-desktop{
@@ -141,7 +125,7 @@ p {
   margin-right:auto;
   width:800px;
   height:400px;
-  margin-top:120px;
+  margin-top:100px;
   margin-bottom:10px;
   box-shadow: 0px 2px 12px rgba(0,0,0,0.25);
   background-color:$backgroundOrange;
@@ -180,7 +164,8 @@ p {
 
 header.navbar {
   background-color:#000;
-}
+
+  }
 
 .midnav {
   background-image: image-url("separator-h.png");
@@ -196,6 +181,7 @@ text-align:center;
     /* IE hasLayout hack */ 
     zoom:1; 
     *display:inline; 
+    
 } 
 
 .nav.midnav > li > a {
@@ -208,7 +194,7 @@ text-align:center;
          -moz-transition: .25s ease-in-out;
          -ms-transition: .25s ease-in-out;
          -o-transition: .25s ease-in-out;
-    &:hover {
+    &:hover, &:active, &:focus {
     text-shadow: 0px 1px 10px rgba(0,0,0,0.35);
     color:$highlight;
     background:transparent;
@@ -239,6 +225,7 @@ text-align:center;
      
    }
  }
+ @-moz-document url-prefix(){ .sub_btn{padding: 2px 12px !important;}}
 .sub_btn{
 display: inline-block;
 padding: 4px 12px;
@@ -417,6 +404,20 @@ text-align:center;
 line-height:1;
 text-shadow: 0 1px 1px rgba(0,0,0,0.25);  
 text-rendering: optimizeLegibility;
+       a{
+          transition: .5s ease-in-out;
+         -webkit-transition: .5s ease-in-out;
+         -moz-transition: .5s ease-in-out;
+         -ms-transition: .5s ease-in-out;
+         -o-transition: .5s ease-in-out;
+          text-decoration: none;
+          color: $backgroundOrange;
+          }
+         a:hover {
+           text-decoration: none;
+           color: #fff200;
+           }
+    
   .beta-text {
     text-shadow: 0 1px 1px rgba(0,0,0,0.15);
     text-rendering: optimizeLegibility;
@@ -425,4 +426,36 @@ text-rendering: optimizeLegibility;
     line-height:1.5;
     
   }
+}
+
+.hero-header {
+  background: image-url("separator-h.png") no-repeat center bottom;
+ h2 {
+   font-family:'Geo';
+   color:#fff200;
+   text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+ }
+  
+}
+
+.hero-img-about{
+  float:left;
+  width:300px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.hero-text {
+  line-height:2;
+  text-align:left;
+  padding:20px;
+  color:#fff200;
+  font-family: $baseFontFamily;
+  font-size: 18px;
+  font-weight: 400;
+  text-shadow: 0 1px 1px $textShadow;
+  i {
+    font-size:18px
+  }
+  
 }
