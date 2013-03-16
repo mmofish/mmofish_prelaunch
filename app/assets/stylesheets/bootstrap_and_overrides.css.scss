@@ -3,7 +3,7 @@
 @import "colors";
 @import "font-awesome";
 
-body { padding-top: 0; }
+body { padding-top: 40px; }
 @import "bootstrap-responsive";
 
 @import url(http://fonts.googleapis.com/css?family=Dosis:400,600,300); /* Body Font */
@@ -16,16 +16,90 @@ body {
   background-repeat: repeat;      
 }
 
+    
+
+ .navbar-fixed-top{
+
+    height:40px;  
+ -webkit-box-shadow: 0 0px 12px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 0px 12px rgba(0,0,0,.5);
+  box-shadow: 0 0px 12px rgba(0,0,0,.5);
+  
+  transition:  .5s ease-in-out;
+  -webkit-transition:  .5s ease-in-out;
+  -moz-transition:  .5s ease-in-out;
+  -ms-transition:  .5s ease-in-out;
+  -o-transition:  .5s ease-in-out;
+}
+.home  #navbar-toggle {   top:-40px;}
+.home  #navbar-toggle:target { top:0;}
+  
+  
+ 
+  .header .navbar-inner {
+  background-image: image-url("bar-bg-dark.png");
+  background-repeat:repeat-x;
+  font-family:'Dosis';
+  background-color: #555555;
+  border:0px;
+  height:40px;
+  box-shadow: 0 1 12px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 1 12px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1 12px rgba(0,0,0,0.5);
+  .container {height:40px;}
+}
+  
+.navbar .brand {
+  border-left:1px solid #3b3b3b;
+  float:left;
+  padding-left: 10px;
+  padding-right: 10px; 
+  margin-right:0px;
+  margin-left:10px;
+  color:transparent;
+  font-size:18px;
+  line-height:1;
+  text-shadow:none;
+    transition:  .25s ease-in-out;
+  -webkit-transition:  .25s ease-in-out;
+  -moz-transition:  .25s ease-in-out;
+  -ms-transition:  .25s ease-in-out;
+  -o-transition:  .25s ease-in-out;
+background:image-url("logo-small.png") no-repeat center;
+ &:hover {
+   background:image-url("logo-small-hover.png") no-repeat center;
+   color:transparent;
+   text-decoration:none;
+ }
+}
+.navbar ul {
+  border-right: 1px solid #3b3b3b;
+  
+}
+.navbar li {
+  border-left: 1px solid #3b3b3b;
+  height:40px;
+
+   line-height:1;
+   font-size: 16px;
+   color: $backgroundOrange;
+
+}
 
 .header .navbar-inner .nav > li > a {
-    color:#666;
-    text-shadow:none;
-    &:hover, &:focus {
+    line-height:1;
+        color: $backgroundOrange;
+    font-family: 'Dosis';
+    font-size:16px;
+    font-weight:400;
     text-shadow: none;
-    color:$white;
+        transition:  .25s ease-in-out;
+  -webkit-transition:  .25s ease-in-out;
+  -moz-transition:  .25s ease-in-out;
+  -ms-transition:  .25s ease-in-out;
+  -o-transition:  .25s ease-in-out;
+    &:hover, &:focus {
+      color:#fff200;
+    text-shadow: none;
     }
-    
   }
- 
- 
-  
