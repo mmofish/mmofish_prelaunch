@@ -19,20 +19,31 @@ private
 
 def add_user_to_mailchimp
     unless self.email.include?('@example.com') or !self.opt_in?
-      mailchimp = Hominid::API.new(ENV["MAILCHIMP_API_KEY"])
-      list_id = mailchimp.find_list_id_by_name "Prerelease Signup"
+      g = Gibbon.new(ENV["MAILCHIMP_API_KEY"])
+      g.throws_exceptions  = false
+      list_id = g.lists({:filters => {:list_name => "Prerelease Signup"}})
       info = { }
-      result = mailchimp.list_subscribe(list_id, self.email, info, 'html', false, true, false, true)
-      Rails.logger.info("MAILCHIMP SUBSCRIBE: result #{result.inspect} for #{self.email}")
+      response = g.list_subscribe({:id => "9e2996659c",
+                                  :email_address => self.email,
+                                  :double_optin => false,
+                                  :send_welcome => true})
+      Rails.logger.info("MAILCHIMP SUBSCRIBE:  #{response}")
     end
   end
+  
 
+   
   def remove_user_from_mailchimp
     unless self.email.include?('@example.com')
-      mailchimp = Hominid::API.new(ENV["MAILCHIMP_API_KEY"])
-      list_id = mailchimp.find_list_id_by_name "Prerelease Signup"
-      result = mailchimp.list_unsubscribe(list_id, self.email, true, false, true)
-      Rails.logger.info("MAILCHIMP UNSUBSCRIBE: result #{result.inspect} for #{self.email}")
+      g = Gibbon.new(ENV["MAILCHIMP_API_KEY"])
+      g.throws_exceptions  = false
+      list_id = g.lists({:filters => {:list_name => "Prerelease Signup"}})
+      response = g.list_unsubscribe({:id => "9e2996659c",
+                                  :email_address => self.email,
+                                  :delete_member => false,
+                                  :send_goodbye => true,
+                                  :send_notify => true})
+      Rails.logger.info("MAILCHIMP UNSUBSCRIBE: #{response}")
     end
   end
 
