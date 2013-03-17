@@ -21,7 +21,7 @@ SimpleNavigation::Configuration.run do |navigation|
         sub_nav.item :key_2_5, 'Orange', nil
     end
     
-    primary.item :key_3, '<i class="icon-check icon-2x si"></i>', nil, {:id => 'key3_nav'} do |sub_nav|
+    primary.item :key_3, '<i class="icon-pencil icon-2x si"></i>', nil, {:id => 'key3_nav'} do |sub_nav|
         sub_nav.dom_class = 'nav inline'
         sub_nav.item :key_3_1, 'Warrior', nil
         sub_nav.item :key_3_2, 'Priest', nil
@@ -30,7 +30,7 @@ SimpleNavigation::Configuration.run do |navigation|
         sub_nav.item :key_3_5, 'Bard', nil
     end
     
-    primary.item :key_4, '<i class="icon-pencil icon-2x si"></i>', nil, {:id => 'key4_nav'} do |sub_nav|
+    primary.item :key_4, '<i class="icon-desktop icon-2x si"></i>', nil, {:id => 'key4_nav'} do |sub_nav|
         sub_nav.dom_class = 'nav inline'
         sub_nav.item :key_4_1, 'Square', nil
         sub_nav.item :key_4_2, 'Circle', nil
@@ -40,7 +40,7 @@ SimpleNavigation::Configuration.run do |navigation|
     
     end
     
-    primary.item :key_5, '<i class="icon-cogs icon-2x si"></i>', nil, {:id => 'key5_nav'} do |sub_nav|
+    primary.item :key_5, '<i class="icon-check icon-2x si"></i>', nil, {:id => 'key5_nav'} do |sub_nav|
         sub_nav.dom_class = 'nav inline'
         sub_nav.item :key_5_1, 'A Setting', nil
         sub_nav.item :key_5_2, 'A Slider', nil
@@ -48,6 +48,16 @@ SimpleNavigation::Configuration.run do |navigation|
         sub_nav.item :key_5_4, 'A Widget', nil
         sub_nav.item :key_5_5, 'A Button', nil
     end
+    
+       primary.item :key_6, '<i class="icon-cog icon-2x si"></i>', nil, {:id => 'key5_nav'} do |sub_nav|
+        sub_nav.dom_class = 'nav inline'
+        sub_nav.item :key_6_1, 'A Setting', nil
+        sub_nav.item :key_6_2, 'A Slider', nil
+        sub_nav.item :key_6_3, 'A Control', nil
+        sub_nav.item :key_6_4, 'A Widget', nil
+        sub_nav.item :key_6_5, 'A Button', nil
+    end
+    
     
   end
 
