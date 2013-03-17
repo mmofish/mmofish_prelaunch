@@ -1,3 +1,5 @@
 <h3>Admin User Profile</h3>
+<p>This page needs to show the complete user profile to an amin - including elements that are admin / officer only with an edit strategy.  Spec needs more details here!</p>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+<p>Back to <%= link_to 'User Managment', admin_users_path %></p>
