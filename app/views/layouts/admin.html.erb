@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Myapp" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Myapp" %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body class="<%= controller_name %> <%= action_name %> admin_layout">
+    <div id="navbar-toggle" class="header navbar navbar-fixed-top">
+      <nav class="navbar-inner">
+        <div class="container">
+          <%= render 'shared/navigation_top' %>
+        </div>
+      </nav>
+    </div>
+    <div id="main" role="main">
+      <div class="container">
+        <div class="content">
+          
+          <div class="row">
+            <div class="span1 pull-left">
+              <%= render_navigation(:context => :admin, :level => 1) %>
+            </div>
+            <div class="span2">
+              <p> Hello <%= current_user.name %></p>
+            </div>
+            
+            <div class="span9">
+              <%= render_navigation(:context => :admin, :level => 2) %>
+            </div>
+            
+          </div>
+          
+          <div class="row">
+            <div class="span12">
+              <%= render 'shared/messages' %>
+              <%= yield %>
+            </div>
+          </div>
+          
+        </div>
+      
+      </div> <!--! end of .container -->
+      
+    </div> <!--! end of #main -->
+      <!--! renders footer -->
+          <%= render 'shared/footer' %>
+  </body>
+</html>
