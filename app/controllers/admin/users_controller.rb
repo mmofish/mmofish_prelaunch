@@ -1,4 +1,4 @@
-class Admin::UsersController < ApplicationController
+class Admin::UsersController < Admin::BaseController
   
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
