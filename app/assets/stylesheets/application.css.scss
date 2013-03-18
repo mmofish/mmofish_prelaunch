@@ -365,8 +365,13 @@ i { font-size: 40px; }
 .social_icons ul {
   margin-left:0;
   padding-left:0;
-  
+  }
+
+.social_icons .icon-play {text-shadow: 0 -1px 1px $textShadow;}
+.social_icons .icon-google-plus-sign, .social_icons .blank-bg, .social_icons .icon-github-sign{
+  color:$backgroundOrange;
 }
+
 
 /* GIT STUFF */
 .span5.git-stuff{
