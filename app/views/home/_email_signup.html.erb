@@ -1,7 +1,7 @@
 <div class="email_signup pull-right">
 <%= form_tag(mailchimp_path) do %>
-<%= text_field_tag 'email', 'get updates', :class => "email_signup" %>
-<%= submit_tag  "Signup", :class => "sub_btn" %>
+<%= text_field_tag :email, params[:email], placeholder: 'subscribe to our newsletter', class: 'email_signup' %>
+<%= submit_tag  "signup", :class => "sub_btn" %>
 <% end %>  
 </div>
 
