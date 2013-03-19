@@ -23,4 +23,7 @@ namespace :admin do
   resources :users
 end
 
+#Routes for contact form
+match 'contact' => 'contact#new', :as => 'contact', :via => :get
+match 'contact' => 'contact#create', :as => 'contact', :via => :post
 end

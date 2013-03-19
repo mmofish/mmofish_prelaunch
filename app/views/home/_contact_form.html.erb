@@ -1,0 +1,39 @@
+<div class="modal fade" id="modal_contact_form">
+		
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">&times;</a>
+    <h3>Contact Form</h3>
+  </div>
+  
+  <div class="modal-body">
+
+		<%= simple_form_for( @message, :url => contact_path, :html => { :class => 'form-horizontal' }) do |f| %>
+		
+		<%= f.input :name, :wrapper => :prepend, :label => false do %>
+		  <%= content_tag :span, "Name", :class => "add-on" %>
+		  <%= f.input_field :name, :required => true, :placeholder => "Enter your name"  %>
+		<% end %> 
+		
+		<%= f.input :email, :wrapper => :prepend, :label => false do %>
+		  <%= content_tag :span, "Email", :class => "add-on" %>
+		  <%= f.input_field :email, :required => true, :placeholder => "Enter your email" %>
+	    <% end %>
+	    
+	    <%= f.input :subject, :wrapper => :prepend, :label => false do %>
+	      <%= content_tag :span, "Subject", :class => "add-on" %>
+	      <%= f.input_field :subject, :required => true, :placeholder => "Enter your subject" %>
+	    <% end %>
+	    
+	    <%= f.input :body, as: :text, label: false, :input_html => { :rows => 5, :class => 'span3' }, :required => true, :placeholder => "Type your message!" %>
+
+		   
+		 
+		
+  </div>
+  
+  <div class="modal-footer">
+	 <%= f.button :button, 'Cancel',  :type => 'reset', :class => 'btn' %>
+  	 <%= f.button :submit, 'Send', :class => 'btn-primary' %>
+  </div>
+  <% end %>
+</div>	
