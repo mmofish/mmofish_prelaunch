@@ -30,6 +30,7 @@ module Myapp
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
     config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += %W(#{config.root}/lib/extras)
 
 
     # Only load the plugins named here, in the order given (default is alphabetical).
@@ -72,5 +73,17 @@ module Myapp
     
     #Change precompile settings for Heroku
     config.assets.initialize_on_precompile = false
+    
+    
+    # Settings for action mailer & Mandrill
+    ActionMailer::Base.smtp_settings = {
+    :port =>           '587',
+    :address =>        'smtp.mandrillapp.com',
+    :user_name =>      ENV['MANDRILL_USERNAME'],
+    :password =>       ENV['MANDRILL_API_KEY'],
+    :domain =>         'mmofish.com',
+    :authentication => :plain
+}
+ActionMailer::Base.delivery_method = :smtp
   end
 end

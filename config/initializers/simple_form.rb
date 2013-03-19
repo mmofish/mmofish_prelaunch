@@ -138,5 +138,7 @@ SimpleForm.setup do |config|
   # config.inputs_discovery = true
 
   # Cache SimpleForm inputs discovery
-  # config.cache_discovery = !Rails.env.development?
+
+  # SimpleForm twitter button wrapper library
+  require 'simple_form_extensions' 
 end
