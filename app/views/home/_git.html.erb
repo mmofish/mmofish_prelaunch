@@ -1,0 +1,21 @@
+<div class="row gitstats text-shadow">
+	<div class="row">
+		<div class="span6">
+			<div id="commit_intro">latest commits!</div>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="span2">
+			<div id="commit_number"><%= @admin_git_updates.commit %></div>
+		</div>
+		<div class="span1 spacer">
+			<div id="commit_hash"><%= @admin_git_updates.hash %></div>
+			<div id="commit_name"><%= @admin_git_updates.commiter %></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span4">
+			<div id="commit_message"><%= @admin_git_updates.comment %></div>
+		</div>
+	</div>
+</div>

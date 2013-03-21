@@ -1,7 +1,5 @@
 Myapp::Application.routes.draw do
 
-
-
   authenticated :user do
     root :to => 'home#index'
   end
@@ -21,6 +19,10 @@ get 'profile', to: 'users#show'
 namespace :admin do
   get '', to: 'dashboard#index', as: '/'
   resources :users
+  resources :git_updates
+  get 'configuration', to: 'configuration#index'    
+  # routes under configuration
+  get 'configuration/mmofish', to: 'configuration/mmofish#index' 
 end
 
 #Routes for contact form

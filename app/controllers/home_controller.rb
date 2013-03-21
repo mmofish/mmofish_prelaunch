@@ -3,6 +3,8 @@ class HomeController < ApplicationController
   #custom restful action - this may need a member route ?
   def index
  @message = Message.new
+ #get me the last created git update ?
+ @admin_git_updates = Admin::GitUpdate.order("created_at").last
   end
 
   def new

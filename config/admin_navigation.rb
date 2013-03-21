@@ -49,9 +49,14 @@ SimpleNavigation::Configuration.run do |navigation|
         sub_nav.item :key_5_5, 'A Button', nil
     end
     
-       primary.item :key_6, '<i class="icon-cog icon-2x si"></i>', nil, {:id => 'key5_nav'} do |sub_nav|
+       primary.item :key_6, '<i class="icon-cog icon-2x si"></i>', admin_configuration_path, {:id => 'key6_nav'} do |sub_nav|
         sub_nav.dom_class = 'nav inline'
-        sub_nav.item :key_6_1, 'A Setting', nil
+        sub_nav.item :key_6_1, 'mmofish', admin_configuration_mmofish_path do |sub_sub_nav|
+          sub_sub_nav.dom_class = 'nav'
+          sub_sub_nav.item :key_6_1_1, 'Foo', '#bah'
+          sub_sub_nav.item :key_6_1_1, 'Bah', '#foo'
+          sub_sub_nav.item :key_6_1_1, 'Git Updates', admin_git_updates_path
+        end  
         sub_nav.item :key_6_2, 'A Slider', nil
         sub_nav.item :key_6_3, 'A Control', nil
         sub_nav.item :key_6_4, 'A Widget', nil

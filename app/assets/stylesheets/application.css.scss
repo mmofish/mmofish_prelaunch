@@ -298,11 +298,16 @@ border-radius: 0 3px 3px 0;
     line-height: 125px;
     margin-left:30px;
    }
-   #commit_hash {
-     padding-left:35px;
-     padding-top:15px;
-     margin-left:55px;
+   .spacer {
+     margin-left:35px;
+     #commit_hash {
+       padding-top:15px;
+     }
+     #commit_name {
+       
+     }
    }
+   
    #commit_message {
      padding-left:10px;
      padding-right:10px;
