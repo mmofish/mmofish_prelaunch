@@ -27,3 +27,7 @@ user3 = User.find_or_create_by_email :name => ENV['SHINOGI_NAME'].dup, :email =>
 puts 'user: ' << user3.name
 user3.confirm!
 user3.add_role :VIP
+
+puts 'GIT UPDATES'
+Admin::GitUpdate.create :comment => 'This is a seeded test comment',  :commit => '045', :hashtag => '24d4d44', :commiter => 'Seed'
+puts 'Git Commit Seeded'
