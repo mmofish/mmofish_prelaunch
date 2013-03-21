@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Comment:</b>
+  <%= @admin_git_update.comment %>
+</p>
+
+<p>
+  <b>Hashtag:</b>
+  <%= @admin_git_update.hashtag %>
+</p>
+
+<p>
+  <b>Commit:</b>
+  <%= @admin_git_update.commit %>
+</p>
+
+<p>
+  <b>Commiter:</b>
+  <%= @admin_git_update.commiter %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_git_update_path(@admin_git_update) %> |
+<%= link_to 'Back', admin_git_updates_path %>
